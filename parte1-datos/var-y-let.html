@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>var</title>
+</head>
+<body>
+	<p id="saludo"></p>
+	<p id="saludo2"></p>
+	<script type="text/javascript">
+		// DEFINICION DE UNA VARIABLE
+		// tipo de dato | nombre de la variable | asignacion | contenido;
+			
+		var saludo="Hola mundo";
+		document.getElementById("saludo2").innerHTML=agregar();
+		function agregar(){
+			var saludo="Hola mundo";
+			if (true) {
+				//Afecta a la variable "saludo" fuera del bloque if
+				var saludo="Hola";
+				console.log(saludo);
+			}
+			//Es afectado por la variable "saludo" del bloque if
+			saludo=saludo+" de nuevo";
+			console.log(saludo);
+			return saludo;
+		}
+		//No es afectado por la variable "saludo" de la function agregar
+		document.getElementById("saludo").innerHTML=saludo;
+	</script>
+</body>
+</html>

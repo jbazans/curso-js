@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ByTagName</title>
+</head>
+<body>
+	<input type="text" name="nombre">
+	<input type="text" name="apellido">
+	<script type="text/javascript">
+		//Devuelve un array de objetos
+		var objects=document.getElementsByTagName("input");
+		console.log(objects);
+		//Devuelve un solo objeto
+		var object=document.getElementsByTagName("input")[0];
+		console.log(object);
+	</script>
+</body>
+</html>
