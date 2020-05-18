@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Value</title>
+</head>
+<body>
+	<input type="text" id="id1">
+	<br><br>
+	<input type="password" id="id2">
+	<br><br>
+	<input type="checkbox" id="id3">
+	<label for="id3">Check box</label>
+	<br><br>
+	<input type="radio" id="id4" name="radio">
+	<label for="id4">Radio 1</label>
+	<input type="radio" id="id5" name="radio">
+	<label for="id5">Radio 2</label>
+	<br><br>
+	<select id="id6">
+		<option value="1">Valor 1</option>
+		<option value="2">Valor 2</option>
+		<option value="3">Valor 3</option>
+	</select>
+	<br><br>
+	<button onclick="mostrar_inputs()">Mostrar</button>
+	<script type="text/javascript">
+		function mostrar_inputs(){
+			let id1=document.getElementById("id1").value;
+			let id2=document.getElementById("id2").value;
+			let id3=document.getElementById("id3").checked;
+			let id4=document.getElementById("id4").checked;
+			let id5=document.getElementById("id5").checked;
+			let id6=document.getElementById("id6").value;
+			let id3_int=0;
+			if (id3) {
+				id3_int=1;
+			}
+			let radio_int=0;
+			if (id4) {
+				radio_int=1;
+			}
+			if (id5) {
+				radio_int=2;
+			}
+			console.log(id1);
+			console.log(id2);
+			console.log("Checkbox: "+id3_int);
+			console.log("Radio: "+radio_int);
+			console.log(id6);
+			console.log("------------------------");
+		}
+	</script>
+</body>
+</html>
